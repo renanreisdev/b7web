@@ -4,73 +4,78 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 <body>
     
     <div class="container">
-        <main>
-            <div class="login">
-                <header>
-                    <div class="sign-in-icon">
-                        <img src="images/enter.svg" width="50">
-                    </div>
-                    <h2>Bem-vindo!</h2>
-                    <p>Entre com a sua conta</p>
-                </header>
-                
-                <section>
-                    <form>
-                        <label>Nome</label><br />
-                        <input type="text" name="name" placeholder="entre com o seu nome">
-                        <br /><br />
+        <div class="login">
+            <header>
+                <div class="sign-in-icon">
+                    <img src="images/enter.svg" width="30">
+                </div>
+                <h2>Bem-vindo!</h2>
+                <p>Entre com a sua conta</p>
+            </header>
+            
+            <section>
+                <form>
+                    <label>Nome</label><br />
+                    <input type="text" name="name" required placeholder="entre com o seu nome">
+                    <br /><br />
 
-                        <label>Senha</label><br />
-                        <input type="password" name="password" placeholder="entre com a sua senha">
-                        <br />
+                    <label>Senha</label><br />
+                    <input type="password" name="password" required placeholder="entre com a sua senha">
+                    <br />
 
-                        <input type="checkbox" name="remenber">
-                        <label>lembre de mim</label>
-                        <a href="#">esqueci minha senha</a>
-                        <br /> <br />
+                    <input type="checkbox" name="remenber" id="remenber">
+                    <label for="remenber">lembre de mim</label>
+                    <a href="#">esqueci minha senha</a>
+                    <br /> <br />
 
-                        <input type="submit" name="login" value="Sign in">
-                    </form>
-                </section>
-            </div>
+                    <input type="submit" name="login" value="Sign in">
+                </form>
+            </section>
+        </div>
 
-            <div class="register">
-                <header>
-                    <div class="person-icon">
-                        <img src="images/person.png" width="50">
-                    </div>
-                    <h2>Criar uma conta!</h2>
-                </header>
-                
-                <section>
-                    <form>
-                        <label>Nome</label><br />
-                        <input type="text" name="name" placeholder="entre com o seu nome">
-                        <br /><br />
+        <div class="register">
+            <header>
+                <div class="person-icon">
+                    <img src="images/person.png" width="30">
+                </div>
+                <h2>Criar uma conta!</h2>
+            </header>
+            
+            <section>
+                <form>
+                    <label>Nome</label><br />
+                    <input type="text" name="name" required placeholder="entre com o seu nome">
+                    <br /><br />
 
-                        <label>E-mail</label><br />
-                        <input type="email" name="name" placeholder="entre com o seu e-mail">
-                        <br /><br />
+                    <label>E-mail</label><br />
+                    <input type="email" name="name" required placeholder="entre com o seu e-mail">
+                    <br /><br />
 
-                        <label>Senha</label><br />
-                        <input type="password" name="password" placeholder="entre com a sua senha">
-                        <br /><br />
+                    <label>Senha</label><br />
+                    <input type="password" name="password" required placeholder="entre com a sua senha">
+                    <br /><br />
 
-                        <label>Confirmar Senha</label><br />
-                        <input type="password" name="confirm_password" placeholder="repita a sua senha">
-                        <br /><br />
+                    <label>Confirmar Senha</label><br />
+                    <input type="password" name="confirm_password" required placeholder="repita a sua senha">
+                    <br /><br />
 
-                        <input type="submit" name="create" value="Criar">
-                    </form>
-                </section>
-            </div>
-        </main>
+                    <input type="submit" name="create" value="Criar">
+                </form>
+            </section>
+        </div>
+
+        <footer>
+            <p>Desenvolvido por: <a href="https://github.com/renanreisdev" target="_blank">Renan Reis</span></p>
+        </footer>
     </div>
 
 </body>

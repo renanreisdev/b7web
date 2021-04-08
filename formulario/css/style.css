@@ -1,0 +1,208 @@
+:root {
+    --color-text: #646464;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Varela Round", "Concert One", cursive, "sans-serif";
+}
+
+html, body {
+    display: flex;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    max-width: 1440px;
+    min-width: 320px;
+    height: 100vh;
+    padding: 0 2%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    
+    box-shadow: -2px 5px 5px 0px #d3d3d3;
+    border-radius: 5px;
+}
+
+.login header {
+    text-align: center;
+}
+
+.login header h2 {
+    color: #4e4e4e;
+    font-size: 28px;
+}
+
+.login header p {
+    color: var(--color-text);
+}
+
+.login section {
+    margin-top: 20px;
+}
+
+.login section label {
+    color: var(--color-text);
+    font-size: 12px;
+}
+
+.login section input[type=text],
+.login section input[type=password] {
+    width: 260px;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 2px;
+
+    color: var(--color-text);
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.login section input[type=text] {
+    margin-bottom: -10px;
+}
+
+.login section input[type=text]:focus,
+.login section input[type=password]:focus {
+    border-bottom: 2px solid rgba(0, 118, 197, 0.7);
+    outline: none;
+}
+
+.login section a {
+    margin-left: 30px;
+    
+    color: rgba(0, 118, 197, 0.7);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.login section a:hover {
+    text-decoration: underline;
+}
+
+.login section a:visited {
+    color: rgba(0, 118, 197, 0.7);
+}
+
+.login section input[type=submit] {
+    width: 120px;
+    height: 40px;
+    padding: 0 10px;
+    
+    background-color: rgba(0, 118, 197, 0.7);
+    border: none;
+    border-radius: 5px;
+
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+
+    cursor: pointer;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 300px;
+    height: 450px;
+    padding: 20px;
+
+    border-radius: 5px;
+    /*
+    background-color: #FF3CAC;
+    background-image: linear-gradient(105deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    */
+
+    background: linear-gradient(115deg, rgba(0, 118, 197, 0.7) 0%,rgba(83, 158, 255, 0.7) 50%, rgba(31, 77, 177, 0.7) 100%);
+}
+
+.register header {
+    text-align: center;
+}
+
+.register header h2 {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.register header p {
+    color: var(--color-text);
+}
+
+.register section {
+    margin-top: 20px;
+}
+
+.register section label {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.register section input[type=text],
+.register section input[type=password],
+.register section input[type=email] {
+    width: 260px;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 2px;
+
+    color: var(--color-text);
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.register section input[type=text],
+.register section input[type=email],
+.register section input:nth-of-type(3) {
+    margin-bottom: -10px;
+}
+
+.register section input[type=text]:focus,
+.register section input[type=email]:focus,
+.register section input[type=password]:focus {
+    border-bottom: 2px solid rgba(0, 28, 88, 0.7);
+    outline: none;
+}
+
+.register section input[type=submit] {
+    width: 120px;
+    height: 40px;
+    padding: 0 10px;
+    
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+
+    color: var(--color-text);
+    font-size: 16px;
+    line-height: 30px;
+
+    cursor: pointer;
+}
