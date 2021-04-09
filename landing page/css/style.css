@@ -60,10 +60,12 @@ header .main-menu ul li {
     cursor: pointer;
 }
 
-header .main-menu ul li:hover a,
+header .main-menu ul li:hover a {
+    color: #ebebeb;
+}
+
 header .main-menu ul li:hover img {
     filter: brightness(2);
-    color: #ffffff;
 }
 
 header .main-menu ul li img {
@@ -71,7 +73,7 @@ header .main-menu ul li img {
 }
 
 header .main-menu ul li a {
-    color: #ebebeb;
+    color: #9E9E9E;
 
     font-size: 13px;
     text-decoration: none;
@@ -201,6 +203,89 @@ header .products-menu ul li a .img-ios14 {
     font-size: 10px;
 }
 
+section.buy-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #F2F2F2;
+}
+
+.buy-products h3 {
+    margin-top: 100px;
+    
+    color: #1D1D1F;
+    font-size: 24px;
+}
+
+.buy-products h2 {
+    margin-top: 15px;
+
+    color: #1D1D1F;
+    font-size: 45px;
+}
+
+.buy-products button {
+    width: 100px;
+    height: 35px;
+    margin-top: 20px;
+    outline: none;
+
+    background-color: #0071E3;
+    border: none;
+    border-radius: 17px;
+
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.buy-products button:hover {
+    background-color: #0077ED;
+}
+
+.buy-products a {
+    margin-top: 20px;
+
+    color: #0066CC;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.buy-products a:hover {
+    text-decoration: underline;
+}
+
+/* Cria a seta ao lado do Saiba mais */
+.buy-products a::after {
+    display: inline-block;
+    padding: 4px;
+    margin-left: 5px;
+    content: "";
+
+    box-shadow: -1px 1px 0 1px #0066CC inset;
+    border: solid transparent;
+    border-width: 1px;
+
+    transform: rotate(45deg);
+}
+
+section .wrapper-img {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 40px;
+}
+
+.buy-products .img-iphone12_12mini {
+    width: 100%;
+    padding-top: 100%;
+    background-image: url("../images/iphone12_12mini.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /* MEDIA - RESPONSIVIDADE */
 
