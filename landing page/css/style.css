@@ -276,6 +276,7 @@ section .wrapper-img {
     width: 100%;
     max-width: 700px;
     margin-top: 40px;
+    margin-bottom: 100px;
 }
 
 .buy-products .img-iphone12_12mini {
@@ -285,6 +286,33 @@ section .wrapper-img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+section.buy-products.background-black {
+    background-color: #000000;
+}
+
+.buy-products h3.text-white,
+.buy-products h2.text-white {
+    color: #f5f5f7;
+}
+
+section .wrapper-img-large {
+    align-self: flex-end;
+
+    width: 100%;
+    max-width: 1440px;
+    max-height: 650px;
+    margin-top: 40px;
+}
+
+.buy-products .img-iphone12pro_12promax {
+    width: 100%;
+    padding-top: 100%;
+    background-image: url("../images/iphone12pro_12promax.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
 }
 
 /* MEDIA - RESPONSIVIDADE */
