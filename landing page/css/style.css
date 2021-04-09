@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header.menu {
+    width: 100%;
+}
+
+.main-menu-mobile {
+    display: none;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+.menu-mobile-line {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+header .main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+
+    background-color: #0a0a0a;
+}
+
+header .main-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header .main-menu ul li {
+    padding: 0 3vw;
+
+    cursor: pointer;
+}
+
+header .main-menu ul li:hover a,
+header .main-menu ul li:hover img {
+    filter: brightness(2);
+    color: #ffffff;
+}
+
+header .main-menu ul li img {
+    transition: 0.2s;
+}
+
+header .main-menu ul li a {
+    color: #ebebeb;
+
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: color 0.2s;
+}
+
+header .products-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 120px;
+    
+    background-color: #111113;
+}
+
+header .products-menu ul {
+    display: flex;
+    justify-content: center;
+
+    list-style: none;
+}
+
+header .products-menu ul li {
+    padding: 0 1.2vw;
+}
+
+header .products-menu ul li a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+header .products-menu ul li a .img-iphone12pro {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/iphone12pro.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-iphone12 {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/iphone12.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-iphonese {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/iphonese.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-iphone11 {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/iphone11.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-iphonexr {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/iphonexr.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-compare {
+    width: 53px;
+    height: 50px;
+
+    background-image: url("../images/compare.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-airpods {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/airpods.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-accessories {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/accessories.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .products-menu ul li a .img-ios14 {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../images/ios14.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.product-text {
+    margin-top: 15px;
+}
+
+.product-highlight {
+    color: #F56300;
+    font-size: 10px;
+}
+
+
+/* MEDIA - RESPONSIVIDADE */
+
+@media screen and (max-width: 1070px) {
+    
+}
+
+@media screen and (max-width: 770px) {
+    
+    .main-menu-mobile {
+        display: block;
+    }
+}
