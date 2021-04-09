@@ -308,7 +308,7 @@ section .wrapper-img-large {
 
 .buy-products .img-iphone12pro_12promax {
     width: 100%;
-    padding-top: 100%;
+    padding-top: 45%;
     background-image: url("../images/iphone12pro_12promax.png");
     background-size: 100%;
     background-repeat: no-repeat;
