@@ -11,9 +11,8 @@ html, body {
 
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1070px;
     height: 100%;
-    margin: 0 auto;
 }
 
 header.menu {
@@ -258,8 +257,8 @@ section.buy-products {
     text-decoration: underline;
 }
 
-/* Cria a seta ao lado do Saiba mais */
-.buy-products a::after {
+/* Cria a seta ao lado do elemento que possui a classe arrow */
+a.arrow::after {
     display: inline-block;
     padding: 4px;
     margin-left: 5px;
@@ -313,6 +312,277 @@ section .wrapper-img-large {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: right top;
+}
+
+.buy-products .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 100px;
+}
+
+section.buy-products.background-white {
+    background-color: #ffffff;
+}
+
+/* box de produtos detalhados para venda */
+.box-buy-products {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+/* box do produto individual detalhado para venda */
+.box-product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 250px;
+    height: 100%;
+}
+
+.wrapper-img-small {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+
+    text-align: center;
+}
+
+.box-product-details .wrapper-img-small.new::after {
+    content: "Novo";
+    display: block;
+    
+    margin-top: 20px;
+
+    color: #BF4800;
+    font-size: 11px;
+}
+
+.box-product-details figure {
+    width: 100%;
+    padding-top: 100%;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-product-details .img-iphone12pro {
+    background-image: url("../images/img_iphone12pro.png");
+}
+
+.box-product-details .img-iphone12 {
+    background-image: url("../images/img_iphone12.png");
+}
+
+.box-product-details .img-iphonese {
+    background-image: url("../images/img_iphonese.png");
+}
+
+.box-product-details .img-iphone11 {
+    background-image: url("../images/img_iphone11.png");
+}
+
+.box-product-details h3 {
+    margin-top: 50px;
+
+    color: #111111;
+    font-size: 22px;
+}
+
+.box-product-details p {
+    color: #1D1D1F;
+    font-size: 14px;
+}
+
+.colors-circles .circle {
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+    margin: 15px 2px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 1px 1px #b6b6b6;
+}
+
+.colors-circles .red-circle {
+    background-color: #C64037;
+}
+
+.colors-circles .beige-circle {
+    background-color: #FDEBD3;
+}
+
+.colors-circles .brown-circle {
+    background-color: #4F4F4D;
+}
+
+.colors-circles .dark-gray-circle {
+    background-color: #2B4F5B;
+}
+
+.colors-circles .medium-gray-circle {
+    background-color: #D0CDD8;
+}
+
+.colors-circles .light-gray-circle {
+    background-color: #E2E3DE;
+}
+
+.colors-circles .light-green-circle {
+    background-color: #D6EFD2;
+}
+
+.colors-circles .dark-blue-circle-circle {
+    background-color: #023C64;
+}
+
+.colors-circles .white-circle {
+    background-color: #F3F3F5;
+}
+
+.colors-circles .dark-brown-circle {
+    background-color: #221F28;
+}
+
+.colors-circles .yellow-circle {
+    background-color: #FBE58F;
+}
+
+.colors-circles .pearl-circle {
+    background-color: #F9F6F1;
+}
+
+.colors-circles .dark-red-circle {
+    background-color: #AB2734;
+}
+
+.box-product-details .line {
+    width: 90%;
+    height: 1px;
+    margin-top: 15px 0;
+
+    background-color: #D2D2D7;
+}
+
+.product-informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    max-width: 180px;
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+.product-informations.fixed-height-150 {
+    height: 130px;
+}
+
+.product-informations.fixed-height-150.justify-content-center {
+    justify-content: center;
+}
+
+div.product-informations.scanner-height {
+    height: 126px;
+}
+
+div.product-informations.magSafe-height {
+    height: 126px;
+}
+
+.product-informations h4 {
+    color: #1D1D1F;
+}
+
+.product-informations p {
+    margin-top: 10px;
+
+    color: #1D1D1F;
+    font-size: 13px;
+}
+
+.product-informations figure {
+    background-size: contain;
+    background-position: center;
+}
+
+.product-informations figure.img_5g {
+    width: 55px;
+    padding-top: 40px;
+    background-image: url("../images/5g.png");
+}
+
+.product-informations figure.img_4g {
+    width: 55px;
+    padding-top: 40px;
+    background-image: url("../images/4g.png");
+}
+
+.product-informations figure.img_a14 {
+    width: 48px;
+    padding-top: 47px;
+    background-image: url("../images/A14.png");
+}
+
+.product-informations figure.img_a13 {
+    width: 48px;
+    padding-top: 47px;
+    background-image: url("../images/A13.png");
+}
+
+.product-informations figure.img_cameraPro {
+    width: 47px;
+    padding-top: 47px;
+    background-image: url("../images/CameraPro.png");
+}
+
+.product-informations figure.img_cameraDupla {
+    width: 47px;
+    padding-top: 47px;
+    background-image: url("../images/CameraDupla.png");
+}
+
+.product-informations figure.img_cameraUnica {
+    width: 47px;
+    padding-top: 47px;
+    background-image: url("../images/CameraUnica.png");
+}
+
+.product-informations figure.img_scanner {
+    width: 43px;
+    padding-top: 47px;
+    background-image: url("../images/Scanner.png");
+}
+
+.product-informations figure.img_magSafe {
+    width: 34px;
+    padding-top: 64px;
+    background-image: url("../images/MagSafe.png");
+}
+
+.product-informations .informations-none {
+    width: 15px;
+    height: 2px;
+
+    background-color: #1D1D1F;
+}
+
+.product-informations span {
+    margin-top: 5px;
+
+    color: #86868B;
+    font-size: 14px;
 }
 
 /* MEDIA - RESPONSIVIDADE */
