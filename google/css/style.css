@@ -6,7 +6,7 @@
 }
 
 html, body {
-    width:100%;
+    height:100%;
 }
 
 header {
@@ -101,4 +101,151 @@ header nav ul li button {
 
 header nav ul li button:hover {
     background-color: #0974ff;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100% - 60px);
+    padding: 0 2.5%;
+}
+
+section > figure {
+    width: 275px;
+    height: 90px;
+
+    background-image: url("../images/google.png");
+}
+
+section form {
+    width: 100%;
+    max-width: 580px;
+}
+
+section .wrapper-search {
+    position: relative;
+
+    width: 100%;
+    height: 44px;
+    margin-top: 28px;
+
+    border: 1px solid #DFE1E5;
+    border-radius: 22px;
+
+    text-align: center;
+}
+
+section .wrapper-search figure {
+    float: left;
+    width: 17px;
+    height: 17px;
+    margin-left: 12px;
+    margin-top: 13px;
+
+    background-image: url("../images/magnifier.png");
+}
+
+section .wrapper-search .search {
+    width: 75%;
+    height: 42px;
+    padding-right: 40px;
+
+    border: none;
+    
+    font-size: 16px;
+    outline: none;
+}
+
+section .wrapper-search .cross {
+    position: absolute;
+    right: 107px;
+    top: 11px;
+    
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../images/cross.png");
+}
+
+section .wrapper-search .line {
+    position: absolute;
+    right: 92px;
+    top: 9px;
+    
+    width: 1px;
+    height: 24px;
+
+    background-color: #DFE1E5;
+}
+
+section .wrapper-search .keyboard {
+    float: right;
+    width: 25px;
+    height: 15px;
+    margin-right: 55px;
+    margin-top: 13px;
+
+    background-image: url("../images/keyboard.png");
+    border: none;
+}
+
+section .wrapper-search .mic {
+    float: right;
+    width: 18px;
+    height: 22px;
+    margin-right: -61px;
+    margin-top: 10px;
+
+    background-image: url("../images/mic.png");
+    border: none;
+}
+
+.clear {
+    clear: both;
+}
+
+section .wrapper-buttons {
+    margin-top: 28px;   
+}
+
+section .wrapper-buttons button {
+    margin: 0 6px;
+    background-color: #F8F9FA;
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+section .wrapper-buttons button:hover {
+    box-shadow: 0 1px 1px 1px #dadada;
+    border-top: 1px solid #dadada;
+}
+
+
+section .wrapper-buttons .search-google {
+    width: 142px;
+    height: 36px;
+}
+
+section .wrapper-buttons .luck {
+    width: 136px;
+    height: 36px;
+}
+
+section p {
+    margin-top: 32px;
+
+    font-size: 12px;
+}
+
+section p a {
+    text-decoration: none;
+}
+
+section p a:hover {
+    text-decoration: underline;
 }
