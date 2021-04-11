@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
-<body>
+<body onload="searchFocus()">
     <header>
         <nav>
             <ul>
@@ -45,12 +45,12 @@
 
         <form action="#">
             <div class="wrapper-search">
-                <figure class="magnifier"></figure>
-                <input type="text" name="search" class="search">
-                <div class="cross"></div>
-                <div class="vertical-line"></div>
-                <button class="keyboard"></button>
-                <button class="mic"></button>
+                <figure class="magnifier" onclick="searchFocus()"></figure>
+                <input type="text" name="search" class="search" onkeyup="searchLength()" title="Pesquisar">
+                <div class="cross" title="Limpar" onclick="searchClear()"></div>
+                <div class="vertical-line" title="Limpar" onclick="searchClear()"></div>
+                <button class="keyboard" title="Ferramentas de inserção de texto"></button>
+                <button class="mic" title="Pesquisar por voz"></button>
             </div>
             <div class="clear"></div>
         </form>
