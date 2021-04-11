@@ -62,7 +62,7 @@ header nav ul li > div {
 }
 
 header nav ul li > div:hover {
-    background-color: aliceblue;
+    background-color: #f0f0f0;
 }
 
 .wrapper-circles {
@@ -81,7 +81,7 @@ header nav ul li > div:hover {
 
     margin: 1px;
 
-    background-color: #686C71;
+    background-color: #5F6368;
     border-radius: 2px;
 }
 
@@ -109,7 +109,8 @@ section {
     align-items: center;
     justify-content: center;
 
-    height: calc(100% - 60px);
+    height: calc(100% - 60px - 94px); /* menos a altura do header e do footer */
+    min-height: 305px;
     padding: 0 2.5%;
 }
 
@@ -138,6 +139,10 @@ section .wrapper-search {
     text-align: center;
 }
 
+section .wrapper-search:hover {
+    box-shadow: 0 0 3px 2px #ececec;
+}
+
 section .wrapper-search figure {
     float: left;
     width: 17px;
@@ -160,6 +165,7 @@ section .wrapper-search .search {
 }
 
 section .wrapper-search .cross {
+    display: none;
     position: absolute;
     right: 107px;
     top: 11px;
@@ -170,7 +176,8 @@ section .wrapper-search .cross {
     background-image: url("../images/cross.png");
 }
 
-section .wrapper-search .line {
+section .wrapper-search .vertical-line {
+    display: none;
     position: absolute;
     right: 92px;
     top: 9px;
@@ -221,10 +228,8 @@ section .wrapper-buttons button {
 }
 
 section .wrapper-buttons button:hover {
-    box-shadow: 0 1px 1px 1px #dadada;
-    border-top: 1px solid #dadada;
+    box-shadow: 0 1px 4px 1px #dadada;
 }
-
 
 section .wrapper-buttons .search-google {
     width: 142px;
@@ -238,6 +243,7 @@ section .wrapper-buttons .luck {
 
 section p {
     margin-top: 32px;
+    margin-bottom: 30px;
 
     font-size: 12px;
 }
@@ -248,4 +254,64 @@ section p a {
 
 section p a:hover {
     text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    background-color: #F2F2F2;
+}
+
+footer .footer-top {
+    display: flex;
+    align-items: center;
+
+    height: 47px;
+    padding-left: 31px;
+
+    color: #6F6F6F;
+    font-size: 15px;
+}
+
+footer .line {
+    width: 100%;
+    height: 1px;
+
+    background-color: #DADCE0;
+}
+
+footer .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 46px;
+    padding: 0 36px;
+}
+
+footer .footer-bottom a {
+    color: #70757A;
+    text-decoration: none;
+    font-size: 15px;
+
+    padding: 0 10px;
+}
+
+@media screen and (max-width:1200px) {
+    footer .footer-bottom {
+        justify-content: space-around;
+
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:799px) {
+    footer .footer-bottom {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 92px;
+    }
 }
