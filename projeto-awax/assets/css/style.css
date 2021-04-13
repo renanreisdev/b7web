@@ -9,6 +9,7 @@ body {
     font-size: 13px;
 }
 
+/* HEADER - MENU */
 header {
     height: 100px;
     background-color: #000000;
@@ -72,3 +73,100 @@ header {
     color: #cccccc;
     border-bottom: 5px solid #b28756;
 }
+/* HEADER - MENU */
+
+/* MAIN - BANNER */
+.banner {
+    height: calc(100vh - 100px);
+
+    background-color: #333333;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: bottom;
+
+    overflow: hidden;
+}
+
+.banner .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.banner .slide {
+    display: inline-block;
+
+    width: 100vw;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    color: #ffffff;
+}
+
+.banner h1 {    
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.banner h1 span {
+    color: #b28756;
+}
+
+.banner h2 {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.banner a {
+    display: block;
+
+    margin-top: 30px;
+    padding: 10px 30px;
+
+    background-color: #b28756;
+    border-radius: 20px;
+    color: #ffffff;
+
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sliders-pointers {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 20px;
+    margin-top: -50px;
+}
+
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    
+    border: 2px solid #b28756;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.banner .pointer.active {
+    background-color: #b28756;
+}
+/* MAIN - BANNER */
