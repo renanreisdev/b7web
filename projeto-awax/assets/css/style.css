@@ -149,7 +149,7 @@ MAIN - BANNER
     text-transform: uppercase;
 }
 
-.sliders-pointers {
+.banner .sliders-pointers {
     position: absolute;
 
     display: flex;
@@ -467,4 +467,124 @@ MAIN - BANNER
 .section-projects--photoarea img {
     width: inherit;
     height: inherit;
+}
+
+
+/* MAIN - SECTION TEAM*/
+.bg-team {
+    padding: 0;
+
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.section-team-area {
+    padding: 50px 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section-team {
+    max-width: 880px;
+    margin: auto;
+    
+    overflow: hidden;
+}
+
+.section-team .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.section-team .slide {
+    display: inline-block;
+
+    width: 280px;
+    height: 100%;
+    height: 300px;
+    margin-right: 16px;
+
+    background-color: #ffffff;
+}
+
+.section-team .slidearea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: 20px;
+
+    color: #000000;
+}
+
+.section-team-area .sliders-pointers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    margin-top: 30px;
+}
+
+.section-team-area .pointer {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    
+    border: 2px solid #b28756;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.section-team-area .pointer.active {
+    background-color: #b28756;
+}
+
+.section-team--avatar {
+    width: 150px;
+    height: auto;
+}
+
+.section-team--name {
+    margin-top: 30px;
+
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-team--role {
+    margin-top: 5px;
+
+    color: #999999;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.section-team--social {
+    display: flex;
+    margin-top: 20px
+}
+
+.section-team--social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+
+    background-color: #ccc;
+    border-radius: 15px;
+
+    cursor: pointer;
+}
+
+.section-team--social a:hover {
+    background-color: #b28756;
 }
