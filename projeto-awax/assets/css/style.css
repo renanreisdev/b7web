@@ -26,7 +26,10 @@ body {
     text-decoration: none;
 }
 
-/* HEADER - MENU */
+
+/*
+HEADER - MENU
+*/
 header {
     height: 100px;
     background-color: #000000;
@@ -90,9 +93,11 @@ header {
     color: #cccccc;
     border-bottom: 5px solid #b28756;
 }
-/* HEADER - MENU */
 
-/* MAIN - BANNER */
+
+/*
+MAIN - BANNER
+*/
 .banner {
     height: calc(100vh - 100px);
 
@@ -170,9 +175,14 @@ header {
 .banner .pointer.active {
     background-color: #b28756;
 }
-/* MAIN - BANNER */
+/*
+MAIN - BANNER
+*/
 
-/* MAIN - SECTION DEFAULT */
+
+/* 
+    MAIN - SECTION DEFAULT
+*/
 .default {
     padding: 50px 0;
 }
@@ -218,15 +228,14 @@ header {
 .default.dark .section-body {
     color: #ffffff;
 }
+
+
+
+
+
+
+
 /* MAIN - SECTION DEFAULT */
-
-
-
-
-
-
-
-
 .section-aboutus {
     display: flex;
 }
@@ -246,8 +255,216 @@ header {
     text-align: center;
 }
 
-.section-aboutus--right img {
-    width: 480px;
+.section-aboutus--right .wrapper-img {
+    position: relative;
+
+    max-width: 480px;
+    max-height: 240px;
 
     box-shadow: 0 5px 10px #333333;
+}
+
+.section-aboutus--right .wrapper-img img {
+    width: 100%;
+}
+
+.section-aboutus--right .wrapper-img .img-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.6);
+
+    cursor: pointer;
+}
+
+.section-aboutus--right .wrapper-img .img-background span {
+    padding: 0 5px;
+
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-aboutus--right .wrapper-img .img-background .play-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+}
+
+.img-background .play-circle .play-arrow {
+    width: 0;
+    height: 0;
+    
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 15px solid #ffffff;
+}
+
+
+/* MAIN - SECTION SERVICES */
+.section-services {
+    display: flex;
+}
+
+.section-service {
+    flex: 1;
+    padding: 15px;
+
+    border-right: 1px solid #333333;
+    
+    text-align: center;
+}
+
+.section-service:first-child {
+    border-left: 1px solid #333333;
+}
+
+.section-service img {
+    width: 60px;
+}
+
+.section-service h4 {
+    margin-top: 20px;
+
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.section-service p {
+    margin-top: 5px;
+
+    color: #999999;
+    font-size: 13px;
+}
+
+
+/* MAIN - SECTION PROJECTS*/
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-projects--filters {
+    position: relative;
+
+    display: inline-block;
+
+    height: 44px;
+
+    padding: 0 20px;
+
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+}
+
+.section-projects--filters ul,
+.section-projects--filters li {
+    list-style: none;
+}
+
+.section-projects--filters li {
+    display: inline-block;
+
+    padding: 0 5px;
+    margin-right: -3px;
+
+    border-left: 1px solid #cccccc;
+
+    color: #555555;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.section-projects--filters li:first-child {
+    border-left: 0;
+}
+
+.section-projects--filters li span {
+    position: relative;
+    top: 0px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    
+    height: 42px;
+    padding: 0 10px;
+
+    border-bottom: 3px solid #eeeeee;
+}
+
+.section-projects--filters li span:hover,
+.section-projects--filters li span.active {
+    border-bottom: 3px solid #b28756;
+}
+
+.section-projects--photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+}
+
+.section-projects--photo {
+    width: 280px;
+}
+
+.section-projects--photoarea {
+    width: 260px;
+    height: 160px;
+    margin: 10px;
+
+    cursor: pointer;
+}
+
+.section-projects--photoinfo {
+    position: absolute;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: inherit;
+    height: inherit;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    color: #ffffff;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinfo {
+    display: flex;
+}
+
+.section-projects--photoinfo h5 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.section-projects--photoarea img {
+    width: inherit;
+    height: inherit;
 }
