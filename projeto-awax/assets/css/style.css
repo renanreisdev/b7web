@@ -26,6 +26,13 @@ body {
     text-decoration: none;
 }
 
+.button.dark {
+    background-color: #1d1d1d;
+}
+
+.button.dark:hover {
+    background-color: #b28756;
+}
 
 /*
 HEADER - MENU
@@ -567,7 +574,7 @@ MAIN - BANNER
 
 .section-team--social {
     display: flex;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .section-team--social a {
@@ -587,4 +594,164 @@ MAIN - BANNER
 
 .section-team--social a:hover {
     background-color: #b28756;
+}
+
+
+/* MAIN - SECTION HAPPY CLIENTS*/
+.section-happyclients {
+    display: flex;
+    overflow: hidden;
+}
+
+.section-happyclients .sliders {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 1000vw;
+    height: 100%;
+}
+
+.section-happyclients .slide {
+    width: 100vw;
+    height: 100%;
+    height: 380px;
+}
+
+.section-happyclients .slidearea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 600px;
+    height: 100%;
+    margin-left: 270px;
+    padding: 20px;
+    color: #000000;
+}
+
+.section-happyclients--avatar {
+    width: 150px;
+    height: auto;
+}
+
+.section-happyclients--name {
+    margin-top: 30px;
+
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-happyclients--role {
+    margin-top: 5px;
+
+    color: #000000;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.section-happyclients--quoteimg {
+    width: 20px;
+    margin-top: 15px;
+}
+
+.section-happyclients--quote {
+    display: flex;
+    margin-top: 20px;
+
+    color: #999999;
+    text-align: center;
+    font-size: 14px;
+}
+
+.section-happyclients .sliders-pointers {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    margin-left: 532px;
+    margin-top: 380px;
+}
+
+.section-happyclients .pointer {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    
+    border: 2px solid #b28756;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.section-happyclients .pointer.active {
+    background-color: #b28756;
+}
+
+
+/* MAIN - SECTION SPONSORS */
+.section-sponsors {
+    display: flex;
+    justify-content: center;
+}
+
+.section-sponsors img {
+    margin-right: 50px;
+}
+
+
+/* MAIN - SECTION SPONSORS */
+.section-price {
+    display: flex;
+    justify-content: center;
+}
+
+.section-price--product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 250px;
+    padding: 20px;
+    margin: 0 10px;
+    
+    background-color: #ffffff;
+}
+
+.section-price--name {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-price--value {
+    margin-top: 15px;
+    color: #000000;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.section-price--period {
+    margin-bottom: 15px;
+
+    color: #999999;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.section-price--specifications {
+    color: #666666;
+}
+
+.section-price--line {
+    width: 7px;
+    height: 1px;
+    margin: 5px 0;
+
+    background-color: #666666;
 }
