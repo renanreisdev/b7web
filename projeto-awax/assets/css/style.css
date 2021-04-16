@@ -17,6 +17,7 @@ body {
     padding: 10px 30px;
 
     background-color: #b28756;
+    border: none;
     border-radius: 20px;
     color: #ffffff;
 
@@ -24,6 +25,13 @@ body {
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(1.1);
 }
 
 .button.dark {
@@ -587,7 +595,7 @@ MAIN - BANNER
     height: 25px;
     margin-right: 10px;
 
-    background-color: #ccc;
+    background-color: #cccccc;
     border-radius: 15px;
 
     cursor: pointer;
@@ -977,4 +985,62 @@ MAIN - BANNER
 .section-tell .bg-pinterest {
     background-color: #C62026;
     background-image: url("../images/pinterest.png");
+}
+
+
+/* MAIN - SECTION CONTACT */
+.section-contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    width: 580px;
+    margin: auto;
+    padding: 30px;
+
+    text-align: center;
+}
+
+.section-contact--wrapper-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-contact form input[type=text],
+.section-contact form input[type=email] {
+    padding: 5px 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #cccccc;
+
+    outline: none;
+}
+
+.section-contact form input::placeholder {
+    color: #cccccc;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-contact form input:nth-of-type(1),
+.section-contact form input:nth-of-type(2) {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.section-contact form input:nth-of-type(3) {
+    margin-bottom: 40px;
+}
+
+.section-contact form input:nth-of-type(3),
+.section-contact form input:nth-of-type(4) {
+    width: 100%;
+}
+
+.section-contact form input.button {
+    width: 160px;
 }
