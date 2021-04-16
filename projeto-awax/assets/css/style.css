@@ -242,6 +242,7 @@ MAIN - BANNER
 
 
 
+
 /* MAIN - SECTION DEFAULT */
 .section-aboutus {
     display: flex;
@@ -754,4 +755,226 @@ MAIN - BANNER
     margin: 5px 0;
 
     background-color: #666666;
+}
+
+
+/* MAIN - SECTION PREMIUM*/
+.section-premium {
+    text-align: center;
+    overflow: hidden;
+}
+
+.section-premium .sliders {
+    width: 1000%;
+    height: 100%;
+
+    text-align: left;
+}
+
+.section-premium .slide {
+    display: inline-block;
+
+    width: 10%;
+    height: 100%;
+
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.section-premium .slidearea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    height: 100%;
+    padding: 20px;
+    color: #000000;
+}
+
+.section-premium--img {
+    width: 300px;
+    height: auto;
+}
+
+.section-premium--features {
+    display: flex;
+    flex-direction: column;
+}
+
+.check::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -40px;
+
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url("../images/check.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-premium--feature {
+    position: relative;
+
+    margin-top: 30px;
+
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-premium--description {
+    margin-top: 5px;
+
+    color: #999999;
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+.section-premium--description p {
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.section-premium .sliders-pointers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20px;
+    margin-top: 30px;
+}
+
+.section-premium .pointer {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    
+    border: 2px solid #b28756;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.section-premium .pointer.active {
+    background-color: #b28756;
+}
+
+
+/* MAIN - SECTION SOME */
+.section-some {
+    display: flex;
+}
+
+.section-some--facts {
+    display: flex;
+
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px;
+    
+    text-align: center;
+}
+
+.section-some--wrapperfacts {
+    display: flex;
+
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-some--facts span {
+    color: #B28756;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.section-some--facts .line {
+    display: block;
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #666666;
+}
+
+.section-some--facts h4 {
+    margin-top: 5px;
+
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.section-some--facts p {
+    margin-top: 5px;
+
+    color: #999999;
+    font-size: 13px;
+}
+
+.section-tell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+}
+
+.section-tell a {
+    margin: 0 15px;
+
+    color: #999999;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.section-tell div {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+}
+
+.section-tell span {
+    margin-left: 3px;
+    color: #999999;
+    font-size: 8px;
+}
+
+.section-tell .bg-twitter {
+    background-color: #2AA9E0;
+    background-image: url("../images/twitter.png");
+}
+
+.section-tell .bg-linkedin {
+    background-color: #006699;
+    background-image: url("../images/linkedin.png");
+}
+
+.section-tell .bg-facebook {
+    background-color: #4867AA;
+    background-image: url("../images/facebook.png");
+}
+
+.section-tell .bg-googleplus {
+    background-color: #DD4D42;
+    background-image: url("../images/googleplus.png");
+}
+
+.section-tell .bg-pinterest {
+    background-color: #C62026;
+    background-image: url("../images/pinterest.png");
 }
