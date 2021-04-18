@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header>
+<header id="header">
     <div class="header">
         <div class="logo">
             <div class="logoimg"></div>
@@ -618,8 +618,11 @@
 </main>
 
 <footer>
+    <a href="#header" class="footer-button-circle">
+        <div class="footer-button-arrow"></div>
+    </a>
     <div class="footer-area">
-        <div class="footer-area--item">
+        <div class="footer-area--item item1">
             <div class="footer-area--item-wrapper-img">
                 <div class="footer-area--item-img bg-twitter"></div>
                 <div class="footer-area--item-img bg-pinterest"></div>
@@ -635,7 +638,7 @@
             <p>Awax © 2016</p>
         </div>
 
-        <div class="footer-area--item">
+        <div class="footer-area--item item2">
             <p>
                 Nam viverra nisi quis mauris molestie, et finibus augue varius. Mauris vestibulum mi eget neque 
                 sollicitudin, sed varius erat eleifend. Nulla sit amet arcu in est faucibus vulputate. Nunc eget 
@@ -645,8 +648,11 @@
             </p>
         </div>
 
-        <div class="footer-area--item">
-            ...'
+        <div class="footer-area--item item3">
+            <form>
+                <input type="email" name="email" placeholder="Email to subscribe">
+                <input type="submit" class="button" name="subscribe" value="Subscribe">
+            </form>
         </div>
     </div>
 </footer>

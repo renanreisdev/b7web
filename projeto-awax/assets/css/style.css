@@ -1100,8 +1100,40 @@ MAIN - BANNER
 
 /* FOOTER */
 footer {
+    position: relative;
     padding: 50px 0;
     background-color: #000000;
+}
+
+.footer-button-circle {
+    position: absolute;
+    top: -20px;
+    left: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: #B28756;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.footer-button-arrow {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-top: 8px;
+
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid #ffffff;
+
+    transform: rotate(45deg);
 }
 
 .footer-area {
@@ -1115,13 +1147,33 @@ footer {
 .footer-area--item {
     flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
     height: 200px;
     margin: 0 30px;
+}
 
-    background-color: #2AA9E0;
+.footer-area--item.item1 {
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: #999999;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-area--item.item2 {
+    justify-content: center;
+    align-items: flex-start;
+
+    color: #999999;
+    line-height: 22px;
+}
+
+.footer-area--item.item3 {
+    justify-content: center;
+    align-items: center;
+
+    background-color: #333333;
 }
 
 .footer-area--item-wrapper-img {
@@ -1176,4 +1228,32 @@ footer {
 
 .footer-area--item-img.bg-googleplus {
     background-image: url("../images/googleplus.png");
+}
+
+.footer-area--item.item3 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-area--item.item3 input[type=email] {
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+
+    background: none;
+    border: none;
+    border-bottom: 2px solid #999999;
+    outline: none;
+
+    color: #999999;
+    text-align: center;
+}
+
+.footer-area--item.item3 input[type=email]::placeholder {
+    color: #999999;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
 }
