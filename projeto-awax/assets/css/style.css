@@ -70,7 +70,7 @@ header {
 
     border-radius: 30px;
     background-color: #b28756;
-    background: linear-gradient(#000000, #b28756aa, #b28756aa, #b28756aa, #000000);
+    background-image: url("../images/logo-awax.png");
 }
 
 .menu {
@@ -81,6 +81,11 @@ header {
 
 .menu-opener {
     display: none;
+    
+    width: 30px;
+    margin-right: 30px;
+    
+    cursor: pointer;
 }
 
 .menu ul,
@@ -710,15 +715,16 @@ MAIN - BANNER
 /* MAIN - SECTION SPONSORS */
 .section-sponsors {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .section-sponsors img {
-    margin-right: 50px;
+    margin: 20px 25px;
 }
 
 
-/* MAIN - SECTION SPONSORS */
+/* MAIN - SECTION PRICE */
 .section-price {
     display: flex;
     justify-content: center;
@@ -1159,9 +1165,11 @@ footer {
 .footer-area {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     width: 100vw;
     max-width: 1440px;
+    margin: auto;
 }
 
 .footer-area--item {
@@ -1309,9 +1317,6 @@ footer {
 
     .menu-opener {
         display: block;
-
-        width: 45px;
-        margin-right: 30px;
     }
 
     nav {
@@ -1470,6 +1475,12 @@ footer {
     }
 }
 
+@media (max-width:650px) {
+    .section-team {
+        width: 280px;
+    }
+}
+
 @media (max-width:590px) {
     .section-tell {
         flex-direction: column;
@@ -1488,9 +1499,6 @@ footer {
 
     .menu-opener {
         display: block;
-
-        width: 45px;
-        margin-right: 30px;
     }
 
     nav {
@@ -1581,10 +1589,6 @@ footer {
 
     .section-happyclients .slidearea {
         min-width: 320px;
-    }
-
-    .section-team {
-        width: 280px;
     }
 
     .section-some--facts {
