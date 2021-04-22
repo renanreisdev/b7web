@@ -10,6 +10,7 @@
 .container {
     max-width: 1140px;
     margin: auto;
+    padding: 0 2%;
 }
 
 .bar {
@@ -149,7 +150,7 @@ header .line {
 
 .area1--content-wrapper {
     width: 100%;
-    min-width: 350px;
+    min-width: 320px;
     max-width: 450px;
 }
 
@@ -191,7 +192,7 @@ header .line {
 
 .area2--content-wrapper {
     width: 100%;
-    min-width: 350px;
+    min-width: 320px;
     max-width: 450px;
 }
 
@@ -305,4 +306,69 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 778px) {
+    .area1 {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .area2 {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .area1 {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media (max-width: 445px) {
+    .header--search input {
+        width: 160px;
+    }
+
+    .header--menu {
+        margin-left: 30px;
+    }
+
+    h1 {
+        font-size: 55px;
+        line-height: 55px;
+    }
+
+    .banner {
+        padding: 30px 0;
+    }
+
+    .banner--images img {
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+
+        border: 3px solid #117050;
+    }
+
+    .area1,
+    .area2,
+    .area3,
+    .area4 {
+        grid-template-columns: 1fr;
+    }
+
+    .area1--content,
+    .area2--content,
+    .area3--content,
+    .area4--content
+     {
+        padding: 10% 2%;
+    }
+
+    .area5 {
+        height: 200px;
+    }
+
+    footer {
+        font-size: 16x;
+        
+    }
 }
