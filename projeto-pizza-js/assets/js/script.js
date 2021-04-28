@@ -1,6 +1,8 @@
 let cart = [];
 let modalQuantity = 1;
 let modalKey = 0;
+let modalPrice = 0;
+let modalSizeIndex = 2;
 
 const qs = e => document.querySelector(e);
 const qsa = e => document.querySelectorAll(e);
@@ -13,11 +15,11 @@ pizzaJson.map((item, index) => {
 
     pizzaItem.setAttribute('data-key', index);
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
-    pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${item.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
+    pizzaItem.querySelector('.pizza-item--price').innerHTML = `A partir de R$ ${item.prices[0].toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
     pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 
-    pizzaItem.querySelector('a').addEventListener('click', (e) => {
+    pizzaItem.querySelector('a').addEventListener('click', e => {
         e.preventDefault(); // retira o funcionamento padrão o elemento
         let key = e.target.closest('.pizza-item').getAttribute('data-key');
         modalQuantity = 1;
@@ -26,10 +28,11 @@ pizzaJson.map((item, index) => {
         qs('.pizzaBig img').src = pizzaJson[key].img;
         qs('.pizzaInfo h1').innerHTML = pizzaJson[key].name;
         qs('.pizzaInfo--desc').innerHTML = pizzaJson[key].description;
-        qs('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[key].price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
+        qs('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[key].prices[modalSizeIndex].toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
+        qs('.pizzaInfo--totalPrice').innerHTML = `R$ ${pizzaJson[key].prices[modalSizeIndex].toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
         qs('.pizzaInfo--size.selected').classList.remove('selected');
         qsa('.pizzaInfo--size').forEach((size, sizeIndex) => {
-            if (sizeIndex == 2) {
+            if (sizeIndex == modalSizeIndex) {
                 size.classList.add('selected');
             }
             size.querySelector('span').innerHTML = pizzaJson[key].sizes[sizeIndex];
@@ -47,7 +50,7 @@ pizzaJson.map((item, index) => {
     qs('.pizza-area').append(pizzaItem);
 });
 
-//Evendtos do MODAL
+//Eventos do MODAL
 function closeModal() {
     qs('.pizzaWindowArea').style.opacity = 0;
     setTimeout(() => {
@@ -62,17 +65,25 @@ qsa('.pizzaInfo--cancelMobileButton, .pizzaInfo--cancelButton').forEach((item) =
 qs('.pizzaInfo--qtmenos').addEventListener('click', () => {
     if (modalQuantity > 1) {
         qs('.pizzaInfo--qt').innerHTML = --modalQuantity;
+        modalPrice = pizzaJson[modalKey].prices[modalSizeIndex] * modalQuantity;
+        qs('.pizzaInfo--totalPrice').innerHTML = `R$ ${modalPrice.toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
     }
 });
 
 qs('.pizzaInfo--qtmais').addEventListener('click', () => {
     qs('.pizzaInfo--qt').innerHTML = ++modalQuantity;
+    modalPrice = pizzaJson[modalKey].prices[modalSizeIndex] * modalQuantity;
+    qs('.pizzaInfo--totalPrice').innerHTML = `R$ ${modalPrice.toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
 });
 
 qsa('.pizzaInfo--size').forEach((size, sizeIndex) => {
-    size.addEventListener('click', (e) => {
+    size.addEventListener('click', e => {
+        modalSizeIndex = sizeIndex;
+        modalPrice = pizzaJson[modalKey].prices[modalSizeIndex] * modalQuantity;
         qs('.pizzaInfo--size.selected').classList.remove('selected');
         size.classList.add('selected');
+        qs('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[modalKey].prices[modalSizeIndex].toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
+        qs('.pizzaInfo--totalPrice').innerHTML = `R$ ${modalPrice.toLocaleString('pt-br', { minimumFractionDigits: 2 })}`;
     });
 });
 
@@ -118,27 +129,12 @@ function updateCart() {
         let total = 0;
 
         for (let i in cart) {
+
             let pizzaItem = pizzaJson.find((item) => item.id == cart[i].id);
-            subtotal += pizzaItem.price * cart[i].quantity;
+            subtotal += pizzaItem.prices[cart[i].size] * cart[i].quantity;
 
             let cartItem = qs('.models .cart--item').cloneNode(true);
-
-            let pizzaSizeName;
-            switch (cart[i].size) {
-                case 0:
-                    pizzaSizeName = 'P';
-                    break;
-
-                case 1:
-                    pizzaSizeName = 'M';
-                    break;
-
-                case 2:
-                    pizzaSizeName = 'G';
-                    break;
-
-            }
-            let pizzaName = `${pizzaItem.name} (${pizzaSizeName})`;
+            let pizzaName = `${pizzaItem.name} - ${pizzaItem.sizes[cart[i].size]}`;
 
             cartItem.querySelector('img').src = pizzaItem.img;
             cartItem.querySelector('.cart--item-nome ').innerHTML = pizzaName;
