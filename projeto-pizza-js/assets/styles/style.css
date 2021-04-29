@@ -48,12 +48,43 @@ aside {
     transition:all ease .2s;
     overflow-x:hidden;
 }
+
 aside.show {
     width:30vw;
 }
 .cart--area {
     padding:20px;
 }
+
+aside.checkout {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width:100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family:'Hepta Slab', Helvetica, Arial;
+    
+    transition:all ease .2s;
+    overflow-x:hidden;
+}
+
+aside.checkout div {
+    width: 15%;
+    height: 60%;
+    background-color: blue;
+}
+
+aside.checkout div a {
+    color: white;
+}
+
 main {
     flex:1;
     padding:20px;
@@ -327,7 +358,7 @@ h1 {
     color:#000;
     font-weight: bold;
 }
-.cart--finalizar {
+.cart--finish {
     padding:20px 30px;
     border-radius:20px;
     background-color:#48d05f;
@@ -338,7 +369,7 @@ h1 {
     border:2px solid #63f77c;
     transition: all ease .2s;
 }
-.cart--finalizar:hover {
+.cart--finish:hover {
     background-color:#35af4a;
 }
 

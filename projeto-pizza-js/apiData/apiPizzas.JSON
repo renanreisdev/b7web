@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Fricassê",
+        "img": "assets/images/pizza.png",
+        "prices": [
+            44.50,
+            54.50,
+            64.50
+        ],
+        "sizes": [
+            "8 Fatias",
+            "12 Fatias",
+            "16 Fatias"
+        ],
+        "description": "Molho, queijo mussarela, fricassê, milho, azeitona, batata palha e orégano"
+    },
+    {
+        "id": 2,
+        "name": "Calabresa",
+        "img": "assets/images/pizza2.png",
+        "prices": [
+            42.00,
+            55.00,
+            62.00
+        ],
+        "sizes": [
+            "8 Fatias",
+            "12 Fatias",
+            "16 Fatias"
+        ],
+        "description": "Molho, queijo mussarela, calabresa, cebola e orégano"
+    },
+    {
+        "id": 3,
+        "name": "Filé ao Vinho Tinto",
+        "img": "assets/images/pizza3.png",
+        "prices": [
+            49.50,
+            59.50,
+            68.50
+        ],
+        "sizes": [
+            "8 Fatias",
+            "12 Fatias",
+            "16 Fatias"
+        ],
+        "description": "Molho, queijo mussarela, filé mignon, cebola, azeitona e orégano"
+    },
+    {
+        "id": 4,
+        "name": "Portuguesa",
+        "img": "assets/images/pizza4.png",
+        "prices": [
+            40.00,
+            55.00,
+            62.00
+        ],
+        "sizes": [
+            "8 Fatias",
+            "12 Fatias",
+            "16 Fatias"
+        ],
+        "description": "Molho, queijo mussarela, presunto, pimentão, tomate, cebola, azeitona, ovos e orégano"
+    },
+    {
+        "id": 5,
+        "name": "Italiana",
+        "img": "assets/images/pizza5.png",
+        "prices": [
+            40.00,
+            55.00,
+            62.00
+        ],
+        "sizes": [
+            "8 Fatias",
+            "12 Fatias",
+            "16 Fatias"
+        ],
+        "description": "Molho, queijo mussarela, salame italiano, pimentão, tomate e orégano"
+    },
+    {
+        "id": 6,
+        "name": "Moda da Casa",
+        "img": "assets/images/pizza6.png",
+        "prices": [
+            44.50,
+            54.50,
+            64.50
+        ],
+        "sizes": [
+            "8 Fatias",
+            "12 Fatias",
+            "16 Fatias"
+        ],
+        "description": "Molho, queijo mussarela, alcatra, bacon, calabresa e orégano"
+    },
+    {
+        "id": 7,
+        "name": "Chocolate",
+        "img": "assets/images/pizza7.png",
+        "prices": [
+            45.00,
+            57.00,
+            65.00
+        ],
+        "sizes": [
+            "8 Fatias",
+            "12 Fatias",
+            "16 Fatias"
+        ],
+        "description": "Chocolate nestlê preto e m&m's"
+    }
+]

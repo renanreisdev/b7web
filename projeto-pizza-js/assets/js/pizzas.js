@@ -1,9 +1,0 @@
-let pizzaJson = [
-    { id: 1, name: 'Mussarela', img: 'assets/images/pizza.png', prices: [44.50, 54.50, 64.50], sizes: ['8 Fatias', '12 Fatias', '16 Fatias'], description: 'Descrição da pizza em mais de uma linha muito legal bem interessante' },
-    { id: 2, name: 'Calabresa', img: 'assets/images/pizza2.png', prices: [44.50, 54.50, 64.50], sizes: ['8 Fatias', '12 Fatias', '16 Fatias'], description: 'Descrição da pizza em mais de uma linha muito legal bem interessante' },
-    { id: 3, name: 'Quatro Queijos', img: 'assets/images/pizza3.png', prices: [44.50, 54.50, 64.50], sizes: ['8 Fatias', '12 Fatias', '16 Fatias'], description: 'Descrição da pizza em mais de uma linha muito legal bem interessante' },
-    { id: 4, name: 'Americana', img: 'assets/images/pizza4.png', prices: [44.50, 54.50, 64.50], sizes: ['8 Fatias', '12 Fatias', '16 Fatias'], description: 'Descrição da pizza em mais de uma linha muito legal bem interessante' },
-    { id: 5, name: 'Sorvete', img: 'assets/images/pizza5.png', prices: [44.50, 54.50, 64.50], sizes: ['8 Fatias', '12 Fatias', '16 Fatias'], description: 'Descrição da pizza em mais de uma linha muito legal bem interessante' },
-    { id: 6, name: 'Moda da Casa', img: 'assets/images/pizza6.png', prices: [44.50, 54.50, 64.50], sizes: ['8 Fatias', '12 Fatias', '16 Fatias'], description: 'Descrição da pizza em mais de uma linha muito legal bem interessante' },
-    { id: 7, name: 'Chocolate', img: 'assets/images/pizza7.png', prices: [44.50, 54.50, 64.50], sizes: ['8 Fatias', '12 Fatias', '16 Fatias'], description: 'Descrição da pizza em mais de uma linha muito legal bem interessante' }
-];
