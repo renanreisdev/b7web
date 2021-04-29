@@ -14,7 +14,7 @@ if (typeof (Storage) != "undefined") {
 }
 
 // LIST PIZZA
-const listPizza = fetch('apiData/apiPizzas.JSON')
+const listPizza = fetch('https://renanreisdev.github.io/b7web/projeto-pizza-js/apiData/apiPizzas.JSON')
     .then(result => result.json())
     .then(data => {
         pizzaJson = data;
