@@ -2,12 +2,14 @@
     box-sizing: border-box;
 }
 body {
+    display:flex;
+
+    margin:0;
+    min-height:100vh;
+
     background-color:#EEE;
     font-family:'Lato',Helvetica,Arial;
     font-size:15px;
-    display:flex;
-    margin:0;
-    min-height:100vh;
 }
 .models {
     display:none;
@@ -17,23 +19,31 @@ header {
     position: fixed;
     left:0;
     top:0;
-    right:0;
-    height:60px;
-    background-color:#399ade;
+
     display:none;
     justify-content: flex-end;
     align-items: center;
+
+    right:0;
+    height:60px;
+    
+    background-color:#399ade;
 }
+
 .menu-openner {
     margin-right: 15px;
-    font-size: 26px;
-    background-color: #a9dcff;
     padding: 5px 20px;
+
+    background-color: #a9dcff;
     border-radius: 5px;
+
+    font-size: 26px;
 }
+
 .menu-openner span {
     margin-right:10px;
 }
+
 .menu-closer {
     width:32px;
     height:32px;
@@ -42,9 +52,11 @@ header {
 }
 
 aside {
-    background-color:#9ccbe6;
     width:0vw;
+
+    background-color:#9ccbe6;
     font-family:'Hepta Slab', Helvetica, Arial;
+    
     transition:all ease .2s;
     overflow-x:hidden;
 }
@@ -52,6 +64,7 @@ aside {
 aside.show {
     width:30vw;
 }
+
 .cart--area {
     padding:20px;
 }
@@ -61,95 +74,145 @@ aside.checkout {
     top: 0;
     left: 0;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
     width:100vw;
     height: 100vh;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     font-family:'Hepta Slab', Helvetica, Arial;
     
-    transition:all ease .2s;
-    overflow-x:hidden;
+    transition:all ease .3s;
+    opacity: 0;
 }
 
-aside.checkout div {
-    width: 15%;
-    height: 60%;
-    background-color: blue;
+.checkout--container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 300px;
+    height: 150px;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 2px 1px #222222;
+}
+
+.checkout--menu-closer {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    width:26px;
+    height:26px;
+
+    font-size: 24px;
+
+    cursor: pointer;
 }
 
 aside.checkout div a {
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #0dc043;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+aside.checkout div a img {
+    margin-bottom: 10px;
 }
 
 main {
     flex:1;
     padding:20px;
 }
+
 h1 {
     font-family:'Hepta Slab', Helvetica, Arial;
 }
+
 .pizza-area {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .pizza-item {
-    text-align: center;
+    margin:0 auto 50px auto;    
     max-width:250px;
+
     font-family:'Hepta Slab', Helvetica, Arial;
-    margin:0 auto 50px auto;
+    text-align: center;
 }
+
 .pizza-item a {
     display:flex;
     flex-direction: column;
     align-items:center;
+
     text-decoration: none;
 }
+
 .pizza-item--img {
     width:200px;
     height:200px;
+
     background-color:#EEE;
     border-radius:100px;
     box-shadow:0px 10px 50px rgba(0, 0, 0, 0.2);
 }
+
 .pizza-item--img img {
     width:100%;
     height:auto;
 }
+
 .pizza-item--add {
     width:50px;
     height:50px;
-    line-height:50px;
+    margin-top:-25px;
+
     border-radius:25px;
     background-color:#388bc5;
-    text-align:center;
+    
     color:#FFF;
+    text-align:center;
+    line-height:50px;
     font-size:22px;
+
     cursor:pointer;
-    margin-top:-25px;
     transition:all ease .2s;
 }
 .pizza-item a:hover .pizza-item--add {
     background-color:#244c88;
 }
+
 .pizza-item--price {
-    font-size:15px;
+    margin-top:5px;
     color:#333;
-    margin-top:5px;
+    font-size:15px;
 }
+
 .pizza-item--name {
-    font-size:20px;
-    font-weight: bold;
-    color:#000;
     margin-top:5px;
+    
+    color:#000;    
+    font-size:20px;
+    font-weight: bold;    
 }
+
 .pizza-item--desc {
-    font-size:13px;
-    color:#555;
     margin-top:10px;
+    color:#555;
+    font-size:13px;
 }
 
 .pizzaWindowArea {
@@ -158,57 +221,73 @@ h1 {
     top:0;
     bottom:0;
     right:0;
-    background-color:rgba(255, 255, 255, 0.5);
+
     display:none;
-    transition: all ease .5s;
     justify-content: center;
     align-items: center;
+
+    background-color:rgba(255, 255, 255, 0.5);
+
+    transition: all ease .5s;
     overflow-y:auto;
 }
+
 .pizzaWindowBody {
+    display:flex;    
     width:900px;
+    margin:20px 0px;
+    
     background-color:#FFF;
     border-radius:10px;
     box-shadow:0px 0px 15px #999;
-    display:flex;
-    margin:20px 0px;
 }
+
 .pizzaBig {
     flex:1;
     display:flex;
     justify-content: center;
     align-items: center;
 }
+
 .pizzaBig--back {
     position:absolute;
+
     width:30px;
     height:30px;
+
     background-color:#000;
 }
+
 .pizzaBig img {
-    height:400px;
     width:auto;
+    height:400px;
 }
+
 .pizzaInfo {
-    flex:1;
-    font-family:'Hepta Slab', Helvetica, Arial;
+    flex:1;    
     padding-bottom:50px;
+    font-family:'Hepta Slab', Helvetica, Arial;
 }
+
 .pizzaInfo h1 {
     margin-top:50px;
 }
+
 .pizzaInfo .pizzaInfo--desc {
-    font-size:15px;
-    color:#999;
     margin-top:10px;
+
+    color:#555;
+    font-size:15px;    
     font-family:'Lato',Helvetica,Arial;
 }
+
 .pizzaInfo--sector {
-    color:#CCC;
-    text-transform: uppercase;
-    font-size:14px;
     margin-top:30px;
     margin-bottom:10px;
+
+    color:#888;
+    text-transform: uppercase;
+    font-size:14px;
 }
 
 .pizzaInfo--sector span:last-child {
@@ -220,155 +299,203 @@ h1 {
     border-radius:10px;
     overflow:hidden;
 }
+
 .pizzaInfo--size {
     padding:10px 35px;
-    color:#000;
+    
     background-color:#EEE;
+
+    color:#000;
     font-size:13px;
     font-weight: bold;
+
     cursor:pointer;
 }
+
 .pizzaInfo--size:hover {
     background-color:#CCC;
 }
+
 .pizzaInfo--size.selected {
     background-color:#399ade;
-    color:#FFF;
+    color:#fbfbfb;
 }
+
 .pizzaInfo--size.selected span {
     color:#D6D6D6;
 }
+
 .pizzaInfo--size span {
     display: block;
-    font-size:12px;
+
     color:#999;
+    font-size:12px;
     font-weight: normal;
 }
+
 .pizzaInfo--price {
     display:flex;
     align-items:center;
 }
+
 .pizzaInfo--actualPrice {
-    font-size:28px;
     margin-right:30px;
+    font-size:28px;    
 }
 
 .pizzaInfo--totalPrice {
-    font-size:28px;
     margin-left:30px;
+    font-size:28px;
 }
 
 .pizzaInfo--qtarea {
     display:inline-flex;
+    height:30px;
+
     background-color:#EEE;
     border-radius:10px;
-    height:30px;
 }
+
 .pizzaInfo--qtarea button {
-    border:0;
+    padding:0px 10px;
+
     background-color:transparent;
+    border:0;
+
+    color:#333;
     font-size:17px;
+
     outline:0;
     cursor:pointer;
-    padding:0px 10px;
-    color:#333;
 }
+
 .pizzaInfo--qt {
-    line-height: 30px;
+    padding: 0px 5px;
+    
+    color:#000;
     font-size: 12px;
     font-weight: bold;
-    padding: 0px 5px;
-    color:#000;
+    line-height: 30px;    
 }
+
 .pizzaInfo--addButton {
-    margin-top:30px;
-    padding:20px 30px;
-    border-radius:20px;
-    background-color:#48d05f;
-    color:#FFF;
     display:inline-block;
-    cursor:pointer;
+    margin-top:30px;
     margin-right:30px;
+    padding:20px 30px;
+
+    background-color:#48d05f;
+    border-radius:20px;
+    
+    color:#FFF;    
+    
+    cursor:pointer;
 }
+
 .pizzaInfo--addButton:hover {
     background-color:#32a345;
 }
+
 .pizzaInfo--cancelButton {
     display:inline-block;
     cursor:pointer;
 }
+
 .pizzaInfo--cancelMobileButton {
     display:none;
     height:40px;
+    margin-bottom:30px;
+
     text-align:center;
     line-height: 40px;
-    margin-bottom:30px;
 }
+
 .cart {
     margin-bottom:20px;
 }
+
 .cart--item {
     display:flex;
     align-items:center;
     margin:10px 0;
 }
+
 .cart--item img {
     width:40px;
     height:40px;
     margin-right:20px;
 }
+
 .cart--item-nome {
     flex:1;
 }
+
 .cart--item--qtarea {
     display:inline-flex;
+    height:30px;
+
     background-color:#EEE;
     border-radius:10px;
-    height:30px;
 }
+
 .cart--item--qtarea button {
-    border:0;
+    padding:0px 10px;
+
     background-color:transparent;
+    border:0;
+    
+    color:#333;
     font-size:17px;
+
     outline:0;
     cursor:pointer;
-    padding:0px 10px;
-    color:#333;
 }
+
 .cart--item--qt {
-    line-height: 30px;
+    padding: 0px 5px;
+
+    color:#000;
     font-size: 12px;
     font-weight: bold;
-    padding: 0px 5px;
-    color:#000;
+    line-height: 30px;
 }
+
 .cart--totalitem {
-    padding:15px 0;
-    border-top:1px solid #79b9dd;
-    color:#315970;
     display:flex;
     justify-content: space-between;
+    padding:15px 0;
+
+    border-top:1px solid #79b9dd;
+    
+    color:#315970;
     font-size:15px;
 }
+
 .cart--totalitem span:first-child {
     font-weight: bold;
 }
+
 .cart--totalitem.big {
-    font-size:20px;
     color:#000;
+    font-size:20px;
     font-weight: bold;
 }
+
 .cart--finish {
-    padding:20px 30px;
-    border-radius:20px;
-    background-color:#48d05f;
-    color:#FFF;
-    cursor:pointer;
-    text-align:center;
     margin-top:20px;
+    padding:20px 30px;
+
+    background-color:#48d05f;
     border:2px solid #63f77c;
+    border-radius:20px;
+    
+    color:#FFF;
+    text-align:center;
+
+    cursor:pointer;
     transition: all ease .2s;
 }
+
 .cart--finish:hover {
     background-color:#35af4a;
 }
@@ -383,31 +510,40 @@ h1 {
     body {
         flex-direction: column;
     }
+
     .pizza-area {
         display:block;
     }
+
     .pizza-item {
         max-width:100%;
     }
+
     header {
         display:flex;
     }
+
     main {
         padding-top:60px;
     }
 
+
     aside {
-        width:auto;
         position:fixed;
         left:100vw;
         right:0;
         top:0;
         bottom:0;
+
+        width:auto;
+
         transition: all ease .2s;
     }
+
     aside.show {
         width:auto;
     }
+
     .cart--area {
         width:100vw;
     }
@@ -422,12 +558,13 @@ h1 {
     }
 
     .pizzaWindowBody {
-        width:100vw;
         display:block;
+        width:100vw;
+        margin:0;
         padding:20px;
+
         border-radius:0;
         box-shadow:none;
-        margin:0;
     }
 
     .pizzaBig img {
@@ -448,37 +585,49 @@ h1 {
     }
 
     .pizzaInfo--actualPrice {
-        font-size:26px;
         margin-right:20px;
+        font-size:26px;
     }
     
     .pizzaInfo--totalPrice {
-        font-size:26px;
         margin-left:20px;
+        font-size:26px;
     }
 
     .pizzaInfo--qtarea {
         height:60px;
     }
+
     .pizzaInfo--qtarea button {
-        font-size:25px;
         padding:0px 12px;
+        font-size:25px;
     }
+
     .pizzaInfo--qt {
+        font-size:20px;
         line-height: 60px;
-        font-size:20px;
     }
+    
     .pizzaInfo--addButton {
-        font-size:20px;
         display:block;
-        text-align:center;
         margin:30px auto;
+
+        text-align:center;
+        font-size:20px;
     }
 
     .pizzaInfo--cancelButton {
         display:none;
     }
+
     .pizzaInfo--cancelMobileButton {
         display:block;
+    }
+}
+
+@media (max-width:455px) {
+    .pizzaInfo--actualPrice,
+    .pizzaInfo--totalPrice {
+        font-size: 22px;
     }
 }

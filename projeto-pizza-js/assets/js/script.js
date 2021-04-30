@@ -1,6 +1,7 @@
 const qs = e => document.querySelector(e);
 const qsa = e => document.querySelectorAll(e);
 
+let cartWhats = "";
 let cart = [];
 let modalQuantity = 1;
 let modalKey = 0;
@@ -14,7 +15,8 @@ if (typeof (Storage) != "undefined") {
 }
 
 // LIST PIZZA
-const listPizza = fetch('https://renanreisdev.github.io/b7web/projeto-pizza-js/apiData/apiPizzas.JSON')
+//const listPizza = fetch('https://renanreisdev.github.io/b7web/projeto-pizza-js/apiData/apiPizzas.JSON')
+const listPizza = fetch('apiData/apiPizzas.JSON')
     .then(result => result.json())
     .then(data => {
         pizzaJson = data;
@@ -142,6 +144,9 @@ function updateCart() {
         let discount = 0;
         let total = 0;
 
+        // WHATSAPP MESSAGE
+        cartWhats = "*** MEU PEDIDO - Via Delivery Pizzas ***%0A";
+
         for (let i in cart) {
 
             let pizzaItem = pizzaJson.find((item) => item.id == cart[i].id);
@@ -168,10 +173,18 @@ function updateCart() {
 
             qs('.cart').append(cartItem);
 
+            // WHATSAPP MESSAGE
+            cartWhats += `%0A${cart[i].quantity}un - ${pizzaItem.name} - ${pizzaItem.sizes[cart[i].size]}`;
+
         }
 
         discount = subtotal * 0.1;
         total = subtotal - discount;
+
+        // WHATSAPP MESSAGE
+        cartWhats += `%0A-------------------------------------`;
+        cartWhats += `%0ATOTAL = R$${total.toLocaleString('pt-br', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        qs('.checkout--whatsapp').setAttribute('href', `https://api.whatsapp.com/send?phone=5553984486685&text=${cartWhats}`);
 
         qs('.subtotal span:last-child').innerHTML = `R$ ${subtotal.toLocaleString('pt-br', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         qs('.discount span:last-child').innerHTML = `R$ ${discount.toLocaleString('pt-br', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
@@ -184,3 +197,18 @@ function updateCart() {
 
     localStorage.cart = JSON.stringify(cart);
 }
+
+qs('.cart--finish').addEventListener('click', () => {
+    qs('aside.checkout').style.display = 'flex';
+    setTimeout(() => {
+        qs('aside.checkout').style.opacity = 1;
+    }, 300);
+});
+
+qs('.checkout--menu-closer').addEventListener('click', () => {
+    qs('aside.checkout').style.opacity = 0;
+    setTimeout(() => {
+        qs('aside.checkout').style.display = 'none';
+    }, 300)
+
+});
